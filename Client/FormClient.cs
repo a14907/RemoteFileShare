@@ -85,6 +85,7 @@ namespace Client
                 else
                 {
                     TreeNode parentnode = FindParentNode(tvFileSystem.Nodes, d.Item2);
+                    parentnode.Nodes.Clear();
                     AppendNode(parentnode.Nodes, d.Item1);
                 }
             }, new Tuple<List<FileDescription>, string>(ls, path));
